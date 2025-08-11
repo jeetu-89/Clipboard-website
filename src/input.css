@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+.section-container{
+    @apply max-w-6xl mx-auto text-center px-10;
+}
+
+.button-container{
+    @apply flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 text-xl text-white;
+}
+
+body {
+  background-image: url("../images/bg-header-desktop.png");
+  @apply bg-no-repeat bg-contain;
+}
+
+@media (max-width: 576px) {
+  body {
+    background-image: url("../images/bg-header-mobile.png");
+    @apply bg-no-repeat bg-contain;
+  }
+}
+
+@layer base{
+    h3{
+        @apply text-4xl md:text-5xl font-bold text-dark-grayish-blue mb-8;
+    }
+    h5{
+        @apply font-bold text-dark-grayish-blue text-2xl mb-2;
+    }
+}
+
+.ficon:hover{
+  filter: invert(53%) sepia(68%) saturate(434%) hue-rotate(121deg) brightness(101%) contrast(94%) ;
+}
+
